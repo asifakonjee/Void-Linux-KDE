@@ -1,0 +1,15 @@
+# How to configure HP printer in Void Linux:
+
+## First start cupsd service:
+sudo ln -s /etc/sv/cupsd /var/service
+sudo sv up cupsd
+
+## Add user to the lpadmin group""
+sudo usermod -aG lpadmin asif
+
+## Istall hplip and print-manager
+sudo xbps-install hplip print-manager
+
+
+
+
