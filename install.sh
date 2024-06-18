@@ -41,11 +41,11 @@ case "$installChoice" in
 #      echo "Installing fonts..."
 #        sudo xbps-install -y fontconfig font-iosevka ttf-material-icons nerd-fonts ttf-ubuntu-font-family terminus-font
       echo "Installing audio packages..."
-        sudo xbps-install -y alsa-utils alsa-plugins-pulseaudio ffmpeg ffmpegthumbs pulseaudio pipewire
+        sudo xbps-install -y pipewire wireplumber alsa-utils alsa-pipewire libjack-pipewire ffmpeg ffmpegthumbs 
       echo "Installing desktop environment..."
         sudo xbps-install -y xorg kde5 kde5-baseapps xdg-user-dirs xdg-utils xtools
       echo "Installing utilities and system tools..."
-        sudo xbps-install -y gvfs gvfs-mtp gzip ntp procps-ng udisks2 unzip zip ark wget curl plymouth bluez tlp tlp-rdw preload zstd
+        sudo xbps-install -y gvfs gvfs-mtp gzip ntp procps-ng udisks2 unzip zip ark wget plymouth bluez tlp tlp-rdw preload zstd
       echo "Installing additional applications..."
         sudo xbps-install -y neofetch htop alacritty kvantum timeshift qt5-devel exa grub-customizer spectacle kcalc gwenview fbv ntfs-3g telegram-desktop hplip octoxbps qbittorrent
         # Edit the following list of additional applications or replace them with your own preferences
@@ -53,7 +53,7 @@ case "$installChoice" in
         echo "Installing Text Editors..."
         sudo xbps-install -y micro kate nano
         # PDF reader
-        echo "Installing Evince..."
+        echo "Installing PDF Reader..."
         sudo xbps-install -y okular
         # Web browser
         echo "Installing Firefox..."
@@ -66,14 +66,14 @@ case "$installChoice" in
         echo "Installing LibreOffice..."
         sudo xbps-install -y libreoffice
         # Audio and video player
-        echo "Installing VLC..."
-        sudo xbps-install -y vlc
+        echo "Installing Video Player..."
+        sudo xbps-install -y mpv
         # Audio recording and streaming
         echo "Installing OBS Studio..."
         sudo xbps-install -y obs
         # File manager...atool is installed for the ranger_archives plugin to work properly
-        echo "Installing Ranger..."
-        sudo xbps-install -y ranger atool
+        # echo "Installing Ranger..."
+        # sudo xbps-install -y ranger atool
         # Install ZSH and Oh My ZSH
         echo "Installing ZSH..."
         sudo xbps-install -y zsh
